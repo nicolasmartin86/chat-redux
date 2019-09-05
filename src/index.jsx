@@ -5,8 +5,6 @@ import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import reduxPromise from 'redux-promise';
 
-import MessageList from './containers/message_list.jsx';
-
 import channelsReducer from './reducers/channels_reducer.js';
 import selectedChannelReducer from './reducers/selected_channel_reducer.js';
 import messagesReducer from './reducers/messages_reducer.js';
@@ -52,8 +50,7 @@ const middlewares = composeEnhancers(applyMiddleware(reduxPromise));
 // render an instance of the component in the DOM
 ReactDOM.render(
   <Provider store={createStore(reducers, initialState, middlewares)}>
-    <App />
-    <MessageList />
+    <App /> 
   </Provider>,
   document.getElementById('root')
 );

@@ -11,7 +11,7 @@ class Message extends Component {
         return(
             <div>
                 <div className="d-flex">
-                    <h1>{this.props.message.author}</h1>
+                    <h3>{this.props.message.author}</h3>
                     <p>{this.props.message.created_at}</p>
                 </div>
                 <div>

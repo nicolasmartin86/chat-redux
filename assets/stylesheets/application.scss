@@ -2,6 +2,29 @@ body {
   font-family: Helvetica;
 }
 .app {
+  display: flex;
+  height: 100vh;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.app > .first-column-logo {
+  background-color: lightgray;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+  align-items: center;
+  img {
+    margin: 16px;
+    height: 64px;
+    width: 64px;
+  }
+
+
+}
+
+.app > .second-column-channels {
+  background-color: #F4F4F4;
+  padding: 16px;
+  width: 20vw;
 }

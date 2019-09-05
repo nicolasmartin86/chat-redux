@@ -1,24 +1,29 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Channel from '../components/channel.jsx';
+
 
 class Channels extends Component {
 
     constructor(props) {
       super(props);
     }
-  
+
     render() {
       return(
-        <div>
+        <div className="second-column-channels">
+            {this.props.channels.map((channel) => {            
+            return <Channel key={channel} channel={channel} />
+            })}
         </div>
       );
     }
-  }
+}
 
-    mapStateToProps = (state) => {
+function mapStateToProps(state) {
         return {
             channels: state.channels
         }
-    };
+};
 
 export default connect(mapStateToProps)(Channels);

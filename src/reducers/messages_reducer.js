@@ -1,6 +1,10 @@
+import FETCH_MESSAGES from '../actions';
+
 export default function(state = null, action) {
     switch (action.type) {
-      default:
-        return state;
+        case FETCH_MESSAGES:
+            return action.payload;
+        default:
+            return state;
     }
   }
