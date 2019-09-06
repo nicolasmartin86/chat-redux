@@ -28,3 +28,22 @@ body {
   padding: 16px;
   width: 20vw;
 }
+
+.message-list {
+  width: 900px;
+  margin: 16px;
+}
+
+.message-block {
+  .message-title {
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    .message-title-author {
+      color: blue;
+    }
+    .message-title-hour {
+      color: grey;
+    }
+  }
+}

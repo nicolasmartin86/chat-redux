@@ -9,12 +9,16 @@ class Message extends Component {
     
     render() {
         return(
-            <div>
-                <div className="d-flex">
-                    <h3>{this.props.message.author}</h3>
-                    <p>{this.props.message.created_at}</p>
+            <div className="message-block">
+                <div className="message-title">
+                    <div className="message-title-author">
+                        {this.props.message.author}
+                    </div>
+                    <div className="message-title-hour">
+                        {this.props.message.created_at}
+                    </div>
                 </div>
-                <div>
+                <div className="message-content">
                     <p>{this.props.message.content}</p>
                 </div>
             </div>
